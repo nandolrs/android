@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical"
+
+    tools:context="br.com.nandolrs.carrorobosuperremoto.MainActivity">
+
+
+
+
+    <!-- dispositivo destino  -->
+
+    <TextView
+        android:id="@+id/labelDispositivoDestinoIp"
+        android:text="IP target/destino"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+    <EditText
+        android:id="@+id/inputDispositivoDestinoIp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        />
+
+    <!--retorno-->
+
+    <TextView
+        android:id="@+id/labelMensagem"
+        android:text="Message/Mensagem"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <EditText
+        android:id="@+id/inputMensagem"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        />
+
+
+    <TextView
+        android:id="@+id/labelDispositivoRetorno"
+        android:text="Answer/Retorno"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+    <EditText
+        android:id="@+id/inputDispositivoRetorno"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        />
+<!--
+    botões
+        motor
+            .direito
+                .aumentar
+                .reduzir
+            .esquerdo
+                .aumentar
+                .reduzir
+-->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:layout_weight="1"
+
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:id="@+id/labelMotorEsquerdoAumentar"
+                android:text="@string/controle_aumentar"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="36sp"
+
+
+                android:background="#9C27B0"
+                android:onClick="IotComandoMotorEsquerdoAumentar"
+                />
+
+
+            <TextView
+                android:id="@+id/inputMotorEsquerdo"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+
+
+                />
+
+            <TextView
+                android:id="@+id/labelMotorEsquerdoReduzir"
+                android:text="@string/controle_reduzir"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="36sp"
+
+
+                android:background="#9C27B0"
+                android:onClick="IotComandoMotorEsquerdoReduzir"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:layout_weight="1"
+
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:id="@+id/labelMotorDireitoAumentar"
+                android:text="@string/controle_aumentar"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="36sp"
+
+
+                android:background="#9C27B0"
+                android:onClick="IotComandoMotorDireitoAumentar"
+                />
+
+
+            <TextView
+                android:id="@+id/inputMotorDireito"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+
+
+                />
+
+            <TextView
+                android:id="@+id/labelMotorDireitoReduzir"
+                android:text="@string/controle_reduzir"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="36sp"
+
+
+                android:background="#9C27B0"
+                android:onClick="IotComandoMotorDireitoReduzir"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    // botões cima, baixo, esquerda, direita
+
+
+    <TextView
+        android:id="@+id/labelDispositivoDestinoCima"
+        android:text="@string/controle_ir"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="36sp"
+
+        android:background="#9C27B0"
+        android:onClick="IotComandoIr"
+        />
+
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        >
+
+        <TextView
+            android:id="@+id/labelDispositivoDestinoEsquerda"
+            android:text="@string/controle_esquerda"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+
+            android:background="#E91E63"
+            android:onClick="IotComandoEsquerda"
+            />
+
+        <TextView
+            android:id="@+id/labelDispositivoDestinoLigarDesligar"
+            android:text="@string/controle_ligar_desligar"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+
+            android:background="#2196F3"
+            android:onClick="IotComandoLigarDesligar"
+
+            />
+
+        <TextView
+            android:id="@+id/labelDispositivoDestinoDireita"
+            android:text="@string/controle_direita"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+
+            android:background="#E91E63"
+            android:onClick="IotComandoDireita"
+            />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/labelDispositivoDestinoBaixo"
+        android:text="@string/controle_voltar"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="36sp"
+
+        android:background="#9C27B0"
+        android:onClick="IotComandoVoltar"
+        />
+
+</LinearLayout>

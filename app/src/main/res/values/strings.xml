@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Remote control</string>
+    <string name="controle_ir">Go/Ir</string>
+    <string name="controle_voltar">Back/Voltar</string>
+    <string name="controle_direita">Turn right/Direita</string>
+    <string name="controle_esquerda">Turn left/Esquerda</string>
+    <string name="controle_ligar_desligar">Turn On/Off / Ligar/Desligar</string>
+    <string name="controle_aumentar">+</string>
+    <string name="controle_reduzir">-</string>
+
+
+</resources>
